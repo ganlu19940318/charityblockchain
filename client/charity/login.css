@@ -1,0 +1,157 @@
+body{
+    font-size: 12px;
+    font-family: "Microsoft YaHei",tahoma,verdana,Arial, Helvetica, sans-serif;
+    color: #fff;
+    overflow: hidden;
+}
+@font-face {
+    font-family: "iconfont";
+    src: url('iconfont.eot?t=1541037006440'); /* IE9*/
+    src: url('iconfont.eot?t=1541037006440#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('data:application/x-font-woff;charset=utf-8;base64,d09GRgABAAAAAATUAAsAAAAABygAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABHU1VCAAABCAAAADMAAABCsP6z7U9TLzIAAAE8AAAARAAAAFY8mEmvY21hcAAAAYAAAABXAAABhmuB0RJnbHlmAAAB2AAAAQkAAAEQpc7OVmhlYWQAAALkAAAALwAAADYTID2ZaGhlYQAAAxQAAAAcAAAAJAfeA4RobXR4AAADMAAAAAwAAAAMDAAAAGxvY2EAAAM8AAAACAAAAAgAWACIbWF4cAAAA0QAAAAeAAAAIAEQAEduYW1lAAADZAAAAUUAAAJtPlT+fXBvc3QAAASsAAAAJgAAADdS5d1QeJxjYGRgYOBikGPQYWB0cfMJYeBgYGGAAJAMY05meiJQDMoDyrGAaQ4gZoOIAgCKIwNPAHicY2BkYWCcwMDKwMHUyXSGgYGhH0IzvmYwYuRgYGBiYGVmwAoC0lxTGByeKT3fy9zwv4EhhrmBoQEozAiSAwDuCgzDeJztkLERgDAMA99OSMExBRUFA1GxKeuQMYLiwBbo7q2z7ErABCSxiwx2YnQdSi3yxBx5jp8iN/xe69UafC6ZbiXcNQq/lpjbu3lva9CbrdcAfwDB6BDGAHicHY5NTsJAGIa/r5OUNhDbxiniZkinP5JoxtgfSlFQJt1WILB05xm66cJLeAJCwjEMW7fewJVLb1AdXb3Jm+dJHiAAP0fyTB7gHARMAdDPBF7cnGDH9bnecRgmXjzOHYHoUv0SeTRDgdkcc4ZnVD/1snSuxUxzyf2Q7JtmT4YWRaSW9vK/7VfXlGaXhVgmSYnha5tyuX3aSo4flaKVU7lWm9uU2vhuue3nzuj1jJ1VBApXUlCgXYmN9H25EaCp3m/ySBxwgQGEVPc9HqkGkvTjPGaE9KnOo3Qck2oh2lIszEF4NyrfytEsHBjH2/pQ14emWK+Lq+VqEkgZTFZL7Xr6d9fwC8A/N3EAAAB4nGNgZGBgAOK3Rlvr4/ltvjJwszCAwA2GmnMI+v8BFgZmByCXg4EJJAoAMgUKWAB4nGNgZGBgbvjfwBDDwgACQJKRARUwAwBHCQJsBAAAAAQAAAAEAAAAAAAAAABYAIh4nGNgZGBgYGawBmIQYAJiLiBkYPgP5jMAAA6jAVgAAHicZY9NTsMwEIVf+gekEqqoYIfkBWIBKP0Rq25YVGr3XXTfpk6bKokjx63UA3AejsAJOALcgDvwSCebNpbH37x5Y08A3OAHHo7fLfeRPVwyO3INF7gXrlN/EG6QX4SbaONVuEX9TdjHM6bCbXRheYPXuGL2hHdhDx18CNdwjU/hOvUv4Qb5W7iJO/wKt9Dx6sI+5l5XuI1HL/bHVi+cXqnlQcWhySKTOb+CmV7vkoWt0uqca1vEJlODoF9JU51pW91T7NdD5yIVWZOqCas6SYzKrdnq0AUb5/JRrxeJHoQm5Vhj/rbGAo5xBYUlDowxQhhkiMro6DtVZvSvsUPCXntWPc3ndFsU1P9zhQEC9M9cU7qy0nk6T4E9XxtSdXQrbsuelDSRXs1JErJCXta2VELqATZlV44RelzRiT8oZ0j/AAlabsgAAAB4nGNgYoAALgbsgJmRiZGZkYWBJTczN5GtMj8vPaOUgQEAJUsEZAAA') format('woff'),
+    url('iconfont.ttf?t=1541037006440') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('iconfont.svg?t=1541037006440#iconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont {
+    font-family:"iconfont" !important;
+    font-size:18px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon-mima:before { content: "\e622"; }
+.icon-yonghu:before { content: "\e7bd"; }    
+.disflex{
+    display: flex;
+}
+.main-bg{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #aaa;
+
+}
+.main{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+}
+.intro-content{
+    position: absolute;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right:36%;
+}
+.login-aside{
+    position: absolute;
+    top:0;
+    right: 0;
+    bottom: 0;
+    width: 36%;
+}
+.login-form{
+    position: relative;
+    top:33%;
+    left:12%;
+    width: 54%;
+}
+@media (max-width: 1024px) and (min-width: 481px){
+    .login-form{
+        top:31%;
+        left:1%;
+        width: 74%;
+    }
+}
+@media (max-width: 1366px) and (min-width: 1025px){
+    .login-form{
+        top:30%;
+        left:1%;
+        width: 66%;
+    }
+}
+@media (max-width: 480px) {
+    .intro-content{
+        position: absolute;
+        top:0;
+        left: 0;
+        bottom: 0;
+        right:90%;
+    }
+    .login-aside{
+        position: absolute;
+        top:0;
+        right: 0;
+        bottom: 0;
+        width: 80%;
+    }
+}
+.inputArea{
+    background-color: #fff;
+    opacity: 0.9;
+    border-radius: 3px;
+    text-align: center;
+}
+.inputArea label{
+    height: 45px;
+    line-height:45px;
+    width: 45px;
+}
+.inputArea input{
+    border: none;
+    outline: none;
+}
+
+.input-user, .input-psw{
+    display: flex;
+    border-bottom: 1px solid #e3e4e5;
+}
+.input-psw:last-child{
+    border-bottom: none;
+}
+label i{
+    color: #ccc;
+    font-size: 18px;
+}
+label.label-active i{
+    color: #555;
+}
+label.label-error i{
+    color: red;
+}
+.select-type{
+    width: 100%;
+    height: 35px;
+    border-bottom: 1px solid #e3e4e5;
+    border-top: 1px solid #e3e4e5;
+    border-left: 0;
+    border-right: 0;
+}
+.item-regist{
+    display: flex;
+    height: 45px;
+    line-height: 45px;
+    font-size: 14px;
+}
+.item-regist span{
+    cursor: pointer;
+}
+.item-regist :hover{
+    color: #3598db;
+}
+.submit-btn{
+    height: 45px;
+    font-size: 16px;
+    background-color: #3598db;
+    color: #fff;
+    width: 100%;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 2px;
+    border:none;
+}
+.err-msg{
+    margin-top:6px;
+    color: red;
+}
