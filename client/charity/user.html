@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慈善页面</title>
+    <link rel="stylesheet" type="text/css" href="user.css"/>
+    <link rel="stylesheet" type="text/css" href="loading.css"/>
+</head>
+<body>
+    <nav class="menu">
+        <div class="menu-item menu-active" id="btn-user"><i class="iconfont icon-user"></i>用户</div>
+    </nav>
+    <div class="main-con">
+        <div class="user-con" id="user-con">
+            <div class="disflex">
+                <div class="user-card">
+                    <span class="line40 card-name"> 慈善名片</span>
+                    <div class="disflex ft14" style="line-height:30px;">
+                            <div class="mr30">
+                                <span>用户地址：</span><span id="userAdd">56788t88</span>
+                            </div>
+                            <div class="mr30">
+                                <span>用户姓名：</span><span id="userName">56788t88</span>
+                            </div>
+                            <div class="mr30">
+                                <span>用户介绍：</span><span id="userInfo">56788t88</span>
+                            </div>
+                            <div>
+                                <span>用户名下物品总价值：</span><em id="userMoney">22230980</em>元
+                            </div>
+                    </div>                 
+                    <label class="label-blue">简介</label>
+                    <p class="" id="userInfo">用户info</p>
+                    <label class="label-blue">捐助记录</label>
+                    <div class="ft14">
+                        <div class="disflex donate-group" id="userGroup"><span>机构1</span><span>机构2</span><span>机构12</span><span>机构123</span></div>
+                    </div>
+
+                </div>
+                <div class="user-modify">
+                    <h3><i class="iconfont icon-transfer"></i>物品转让</h3>
+                    <form action="##">
+                        <div class="input-box"> 
+                            <div class="form-item">
+                                <label>用户地址：</label><input id="userPoeid" type="text"/>
+                            </div>
+                            <div class="form-item">
+                                <label>用户密码：</label><input id="userPsw" type="text"/>
+                            </div>
+                            <div class="form-item">
+                                <label>对方地址：</label><input id="poeidOther" type="text"/>
+                            </div>
+                            <div class="form-item">
+                                <label>物品：</label><input id="poeidCharity" type="text"/>
+                            </div>
+                        </div>         
+                        
+                        <div>
+                            <button class="submit" type="button" onclick="userTransfer()">确认转让</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div>
+                <h3><i class="iconfont icon-top"></i>慈善排行榜</h3>
+                <table id="userTable">
+                    <thead>
+                        <th>用户地址</th>
+                        <th>用户姓名</th>
+                        <th>用户简介</th>
+                        <th>捐助总额</th>
+                    </thead>
+                    <tbody></tbody>     
+                </table>
+            </div>    
+        </div>
+    </div>
+    <div id="loadingCss" class="mengban" style="display:none;">
+        <div class="loading-box">
+            <div class="loader-03"></div>
+            <p>加载中...</p>
+        </div>      
+    </div>
+
+<script src="jquery3.3.1.min.js"></script>   
+<script src="user.js"></script>
+</body>
+</html>
