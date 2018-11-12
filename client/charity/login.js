@@ -83,6 +83,8 @@ function regist(){
     let name = $("#name").val();
     let type = $("#typeSelect").val();
     let pswAgain = $("#surPsw").val();
+    let tel = $("#telNum").val();
+    let info = $("#infomation").val();
     const pswReg = /[a-z0-9A-Z]{8,16}/;
     if(userName===""){
         $("#errMsg").empty().html("用户名不能为空");
@@ -147,7 +149,9 @@ function regist(){
             "username":userName,
             "password":password,
             "type":type,
-            "name":name
+            "name":name,
+            "tel":tel,
+            "info":info,
         },
         beforeSend:function(){
             $("#loadingCss").show();
@@ -189,6 +193,9 @@ function regist(){
 function showRegist(){
     $("#pswAgain").show();
     $("#toLogin").show();
+    $("#tel").show();
+    $("#fullName").show();
+    $("#info").show();
     $("#toRegist").hide();
     $("#loginDiv").hide();
     $("#registDiv").show();
@@ -200,6 +207,9 @@ function showRegist(){
 function showLogin(){
     $("#pswAgain").hide();
     $("#toLogin").hide();
+    $("#phoneNum").hide();
+    $("#fullName").hide();
+    $("#summary").hide();
     $("#toRegist").show();
     $("#loginDiv").show();
     $("#registDiv").hide();
