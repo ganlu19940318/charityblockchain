@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慈善页面</title>
+    <link rel="stylesheet" type="text/css" href="institution.css"/>
+    <link rel="stylesheet" type="text/css" href="loading.css"/>
+</head>
+<body>
+    <nav class="menu">
+        <div class="menu-item menu-active" id="btn-group"><i class="iconfont icon-group"></i>机构</div>
+        
+    </nav>
+    <div class="main-con">
+        <div class="group-con" id="group-con">
+            <div class="disflex mediaflex">
+                <div class="charity-add">
+                        <label></label><h3><i class="iconfont icon-add"></i>创建慈善物品</h3>
+                        <form class="ft14" action="##">
+                            
+                            <div class="line40">
+                                    <label class="label-left">金额/元：</label>
+                                    <input id="moneyGroup" type="text" placeholder="单位/元"/>
+                            </div>     
+                            <div class="line40">
+                                    <label class="label-left">物品名称：</label>
+                                    <input id="name" type="text" placeholder="慈善物品名称"/>
+                            </div>               
+                            <div class="line40">
+                                    <label class="label-left">机构用户名</label>
+                                    <input id="poeid" type="text" placeholder="物品确认码1"/>
+                            </div>
+                            <div class="line40">
+                                    <label class="label-left">密码</label>
+                                    <input id="pkAddress" type="text" placeholder="物品确认码2"/>
+                            </div>
+
+                            <label style="display:block">物品简介：</label>
+                            <textarea id="infoGroup" class="info-textarea"></textarea>
+                            <div class="creat-box">
+                                <button  class="submit submit-small" type="button" onclick="createCharity()">提交申请</button>
+                            </div>
+                        </form>
+                    </div>
+                <div class="charity-sure">
+                    <h3><i class="iconfont icon-sure"></i>发放慈善物品</h3>
+                    <form action="##">
+                        <div class="input-box">
+                               
+                            <div class="form-item">
+                                <label>物品地址：</label><input id="resAdd" type="text" placeholder="物品地址"/>
+                            </div>
+                            <div class="form-item">
+                                <label>确认码1：</label><input id="resConfirm_1" type="text" placeholder="物品确认码1"/>
+                            </div>
+                            <div class="form-item">
+                                <label>确认码2：</label><input id="resConfirm_2" type="text" placeholder="物品确认码2"/>
+                            </div>
+                            <div class="form-item">
+                                <label>用户地址：</label><input id="donateAdd" type="text" placeholder="捐助方地址"/>
+                            </div>
+                        </div>         
+                        <div>
+                            <button class="submit submit-small" type="button" onclick="confirmMoney()">确认</button>
+                        </div>
+                    </form>
+                </div>      
+            </div>
+            <div >
+                <h3><i class="iconfont icon-top"></i>排行榜</h3>
+                <table id="groupTable">
+                    <thead>
+                        <th>物品地址</th>
+                        <th>物品名称</th>
+                        <th>物品金额</th>
+                        <th>物品信息</th>
+                        <th>捐助状态</th>
+                        <th width="30%">用户地址</th>             
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>           
+        </div>
+
+    </div>
+    <div id="loadingCss" class="mengban" style="display:none;">
+        <div class="loading-box">
+            <div class="loader-03"></div>
+            <p>加载中...</p>
+        </div>      
+    </div>
+
+<script src="jquery3.3.1.min.js"></script>   
+<script src="institution.js"></script>
+</body>
+</html>

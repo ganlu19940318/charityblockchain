@@ -11,16 +11,49 @@ $("#userName").focus(function(){
     document.getElementById("userLabel").className = "label-active";
     $("#pswLabel").removeClass();
     $("#surePswLabel").removeClass();
+    $("#telLabel").removeClass();
+    $("#nameLabel").removeClass();
+    $("#infoLabel").removeClass();
 });
 $("#psword").focus(function(){
     document.getElementById("pswLabel").className = "label-active";
     $("#userLabel").removeClass();
     $("#surePswLabel").removeClass();
+    $("#telLabel").removeClass();
+    $("#nameLabel").removeClass();
+    $("#infoLabel").removeClass();
 });
 $("#surPsw").focus(function(){
     document.getElementById("surePswLabel").className = "label-active";
     $("#userLabel").removeClass();
     $("#pswLabel").removeClass();
+    $("#telLabel").removeClass();
+    $("#nameLabel").removeClass();
+    $("#infoLabel").removeClass();
+});
+$("#telNum").focus(function(){
+    document.getElementById("telLabel").className = "label-active";
+    $("#userLabel").removeClass();
+    $("#pswLabel").removeClass();
+    $("#surePswLabel").removeClass();
+    $("#nameLabel").removeClass();
+    $("#infoLabel").removeClass();
+});
+$("#name").focus(function(){
+    document.getElementById("nameLabel").className = "label-active";
+    $("#userLabel").removeClass();
+    $("#pswLabel").removeClass();
+    $("#surePswLabel").removeClass();
+    $("#telLabel").removeClass();
+    $("#infoLabel").removeClass();
+});
+$("#infomation").focus(function(){
+    document.getElementById("infoLabel").className = "label-active";
+    $("#userLabel").removeClass();
+    $("#pswLabel").removeClass();
+    $("#surePswLabel").removeClass();
+    $("#telLabel").removeClass();
+    $("#nameLabel").removeClass();
 });
 
 //登录
@@ -53,7 +86,9 @@ function login(){
         },
         success:function(res){
             if(res.result_code==0){
-                location.href="charity.html";
+                location.href="user.html";
+                if(res.result.type == 0)
+                    location.href="institution.html";
                 let address = res.result.address;
                 let pk64 = res.result.pk64;
                 let poeid = res.result.poeid;
@@ -83,6 +118,8 @@ function regist(){
     let name = $("#name").val();
     let type = $("#typeSelect").val();
     let pswAgain = $("#surPsw").val();
+    let tel = $("#telNum").val();
+    let info = $("#infomation").val();
     const pswReg = /[a-z0-9A-Z]{8,16}/;
     if(userName===""){
         $("#errMsg").empty().html("用户名不能为空");
@@ -147,7 +184,9 @@ function regist(){
             "username":userName,
             "password":password,
             "type":type,
-            "name":name
+            "name":name,
+            "tel":tel,
+            "info":info,
         },
         beforeSend:function(){
             $("#loadingCss").show();
@@ -189,6 +228,9 @@ function regist(){
 function showRegist(){
     $("#pswAgain").show();
     $("#toLogin").show();
+    $("#tel").show();
+    $("#fullName").show();
+    $("#info").show();
     $("#toRegist").hide();
     $("#loginDiv").hide();
     $("#registDiv").show();
@@ -200,6 +242,9 @@ function showRegist(){
 function showLogin(){
     $("#pswAgain").hide();
     $("#toLogin").hide();
+    $("#tel").hide();
+    $("#fullName").hide();
+    $("#info").hide();
     $("#toRegist").show();
     $("#loginDiv").show();
     $("#registDiv").hide();
