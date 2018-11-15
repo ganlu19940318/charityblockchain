@@ -77,7 +77,7 @@ function confirmMoney(){
         type:"post",
         dataType:"json",
         data: {
-            "poeid": storage.poeid,
+            "poeid": $("#resAdd").val(),
             "address": storage.address,
             "pk64": storage.pk64,
             "useraddress":$("#donateAdd").val(),      
