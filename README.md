@@ -1,5 +1,5 @@
 # charity blockchain
-CharityChain——charity blockchain based on arxan Baas
+CharityChain——charity blockchain based on Arxan Baas
 
 Nowadays，blockchain，as a famous newly technology,has been widely used to solve many problems about trust and data security.
 
@@ -11,6 +11,6 @@ So when it comes to Blockchain,we think it as a Baas for the people to make the 
 
 To build it, we began our try to make CharityChain to record every charity behavior,and make it useful to the people’s public image.Everyone using our CharityChain can build his personly social name card,which faithfully records his donation and generosity.
 
-Thanks to GanLu（HUST）and ChenBin（DLUT），we finally made a simply demo as this project,and provide it to everyone agree with us.
+Thanks to GanLu（HUST）， ChenBin（DLUT）and MaYilin（HUST），we finally made a simply demo as this project,and provide it to everyone agree with us.
 
 To learn more about our design and achievement in CharityChain,contact Dr Wang at 125801169@qq.com
