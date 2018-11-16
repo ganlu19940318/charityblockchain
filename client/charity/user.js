@@ -39,7 +39,7 @@ function userCard(){
             let chStr="";
             for(let i = 0; i < charitys.length; i++)
             {
-                chStr += "<tr><td width=10%>物品地址：</td><td width=50%>" + charitys[i].address + "</td><td width=10%>金额：</td><td width=30%>" + charitys[i].money + "</td></tr>";
+                chStr += "<tr><td>物品地址：</td><td>" + charitys[i].address + "</td><td>物品名称："+charitys[i].itemname+"</td><td>金额：</td><td>" + charitys[i].money + "</td></tr>";
             }
             $("#userGroup").find("tbody").empty().html(chStr);
             //$("#userGroup").empty().html(res.result.charity);
