@@ -48,7 +48,7 @@ public class BlockchainController {
         return JSONObject.toJSONString(jsonResult);
     }
 
-    @ApiOperation(value="创建慈善项目", notes="创建慈善项目")
+    @ApiOperation(value="创建慈善物品", notes="创建慈善物品")
     @ResponseBody
     @RequestMapping(value = "/create", method = RequestMethod.POST)
     public String create(CreateReq createReq) throws Exception {
@@ -56,18 +56,18 @@ public class BlockchainController {
         logger.info("createReq:"+createReq);
 
         JsonResult jsonResult = blockchainService.doCreate(createReq);
-
+        System.out.println("create:"+JSONObject.toJSONString(jsonResult));
         return JSONObject.toJSONString(jsonResult);
     }
 
-    @ApiOperation(value="查看慈善项目", notes="查看慈善项目")
+    @ApiOperation(value="查看机构自己的所有物品", notes="查看机构自己的所有物品")
     @ResponseBody
     @RequestMapping(value = "/query", method = RequestMethod.POST)
-    public String query() throws Exception {
+    public String query(QueryReq queryReq) throws Exception {
 
         logger.info("query all");
 
-        JsonResult jsonResult = blockchainService.doQuery();
+        JsonResult jsonResult = blockchainService.doQuery(queryReq);
 
         return JSONObject.toJSONString(jsonResult);
     }
@@ -93,10 +93,11 @@ public class BlockchainController {
 
         JsonResult jsonResult = blockchainService.doCard(cardReq);
 
+        System.out.println("result:"+ JSONObject.toJSONString(jsonResult));
         return JSONObject.toJSONString(jsonResult);
     }
 
-    @ApiOperation(value="查看慈善排行", notes="查看慈善排行")
+    @ApiOperation(value="查看慈善排行(用户)", notes="查看慈善排行(用户)")
     @ResponseBody
     @RequestMapping(value = "/rank", method = RequestMethod.POST)
     public String rank() throws Exception {
@@ -104,6 +105,18 @@ public class BlockchainController {
         logger.info("do rank");
 
         JsonResult jsonResult = blockchainService.doRank();
+
+        return JSONObject.toJSONString(jsonResult);
+    }
+
+    @ApiOperation(value="查看慈善排行(物品)", notes="查看慈善排行(物品)")
+    @ResponseBody
+    @RequestMapping(value = "/rankitem", method = RequestMethod.POST)
+    public String rankitem() throws Exception {
+
+        logger.info("do rankitem");
+
+        JsonResult jsonResult = blockchainService.doRankItem();
 
         return JSONObject.toJSONString(jsonResult);
     }

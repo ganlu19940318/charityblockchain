@@ -1,20 +1,18 @@
 package com.example.demo.entity;
 
+import io.swagger.annotations.ApiParam;
+
 public class ConfirmReq {
+
+    @ApiParam(value = "慈善机构物品(当前用户)的poeid", required = true)
     private String poeid;
+    @ApiParam(value = "慈善机构(当前用户)的address", required = true)
     private String address;
+    @ApiParam(value = "慈善机构(当前用户)的pk64", required = true)
     private String pk64;
     // poeid
+    @ApiParam(value = "用户(目标用户)的poeid", required = true)
     private String useraddress;
-    private long money;
-
-    public long getMoney() {
-        return money;
-    }
-
-    public void setMoney(long money) {
-        this.money = money;
-    }
 
     public String getPoeid() {
         return poeid;

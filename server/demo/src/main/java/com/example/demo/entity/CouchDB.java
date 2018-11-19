@@ -5,7 +5,6 @@ import java.util.ArrayList;
 public class CouchDB {
     private String name;
     private String type;
-    private String state;
     private String info;
     private long money;
     private ArrayList<Enty> charity;
@@ -24,14 +23,6 @@ public class CouchDB {
 
     public void setType(String type) {
         this.type = type;
-    }
-
-    public String getState() {
-        return state;
-    }
-
-    public void setState(String state) {
-        this.state = state;
     }
 
     public String getInfo() {

@@ -52,7 +52,9 @@ function createCharity(){
         success:function(res){
             $("#loadingCss").hide();
             if(res.result_code==0){
-                alert("申请成功！");
+		let mes = "申请成功！";
+		mes = mes + "\n"+"物品poeid="+res.result.poeid+"\n确认码1="+res.result.address+"\n确认码2="+res.result.pk64;
+                alert(mes);
             }
             else{
                 alert("申请失败！");

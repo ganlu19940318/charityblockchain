@@ -12,5 +12,4 @@ public interface UserRepository extends CrudRepository<User,Long> {
     List<User> findAllByDtype(String type);
     List<User> findAllByAddress(String address);
     List<User> findAllByPoeid(String poeid);
-    List<User> findAllByDtypeAndStateIsNotContaining(String type, String state);
 }

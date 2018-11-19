@@ -1,13 +1,12 @@
 package com.example.demo.entity;
 
-import java.util.ArrayList;
 
 public class QueryResp {
     private String address;
     private String name;
     private String info;
     private long money;
-    private ArrayList<Enty> donateaddress;
+    private String donateaddress;
     private String state;
 
     public String getAddress() {
@@ -42,11 +41,11 @@ public class QueryResp {
         this.money = money;
     }
 
-    public ArrayList<Enty> getDonateaddress() {
+    public String getDonateaddress() {
         return donateaddress;
     }
 
-    public void setDonateaddress(ArrayList<Enty> donateaddress) {
+    public void setDonateaddress(String donateaddress) {
         this.donateaddress = donateaddress;
     }
 

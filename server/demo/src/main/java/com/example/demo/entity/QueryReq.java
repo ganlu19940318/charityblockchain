@@ -2,9 +2,8 @@ package com.example.demo.entity;
 
 import io.swagger.annotations.ApiParam;
 
-public class CardReq {
-    // poeid
-    @ApiParam(value = "用户的poeid", required = true)
+public class QueryReq {
+    @ApiParam(value = "机构的address,不是poeid", required = true)
     private String address;
 
     public String getAddress() {

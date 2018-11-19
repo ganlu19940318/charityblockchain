@@ -1,10 +1,36 @@
 package com.example.demo.entity;
 
+import io.swagger.annotations.ApiParam;
+
 public class RegisterReq {
+    @ApiParam(value = "用户名", required = true)
     private String username;
+    @ApiParam(value = "密码", required = true)
     private String password;
+    @ApiParam(value = "类型,0代表机构,1代表用户", required = true)
     private String type;
+    @ApiParam(value = "名称", required = true)
     private String name;
+    @ApiParam(value = "基本信息", required = true)
+    private String info;
+    @ApiParam(value = "电话号码", required = true)
+    private String tel;
+
+    public String getInfo() {
+        return info;
+    }
+
+    public void setInfo(String info) {
+        this.info = info;
+    }
+
+    public String getTel() {
+        return tel;
+    }
+
+    public void setTel(String tel) {
+        this.tel = tel;
+    }
 
     public String getName() {
         return name;

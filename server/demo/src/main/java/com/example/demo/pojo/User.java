@@ -20,13 +20,19 @@ public class User {
     private String pk64;
     private String dtype;
     private String info;
-    private String state;
     private String charity;
     private long money;
     private String poeid;
     private String dname;
+    private String tel;
 
+    public String getTel() {
+        return tel;
+    }
 
+    public void setTel(String tel) {
+        this.tel = tel;
+    }
 
     public String getPoeid() {
         return poeid;
@@ -98,14 +104,6 @@ public class User {
 
     public void setInfo(String info) {
         this.info = info;
-    }
-
-    public String getState() {
-        return state;
-    }
-
-    public void setState(String state) {
-        this.state = state;
     }
 
     public String getCharity() {

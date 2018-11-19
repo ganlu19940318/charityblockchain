@@ -6,9 +6,10 @@ public interface BlockchainService {
     JsonResult doRegister(RegisterReq registerReq);
     JsonResult doLogin(LoginReq loginReq);
     JsonResult doCreate(CreateReq createReq);
-    JsonResult doQuery();
+    JsonResult doQuery(QueryReq queryReq);
     JsonResult doConfirm(ConfirmReq confirmReq);
     JsonResult doCard(CardReq cardReq);
     JsonResult doRank();
     JsonResult doTrade(TradeReq tradeReq);
+    JsonResult doRankItem();
 }

@@ -1,7 +1,11 @@
 package com.example.demo.entity;
 
+import io.swagger.annotations.ApiParam;
+
 public class LoginReq {
+    @ApiParam(value = "用户名", required = true)
     private String username;
+    @ApiParam(value = "密码", required = true)
     private String password;
 
     public String getUsername() {

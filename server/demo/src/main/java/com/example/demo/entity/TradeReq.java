@@ -1,10 +1,18 @@
 package com.example.demo.entity;
 
+import io.swagger.annotations.ApiParam;
+
 public class TradeReq {
+    @ApiParam(value = "用户的poeid", required = true)
     private String poeid;
+    @ApiParam(value = "用户的address", required = true)
     private String address;
+    @ApiParam(value = "用户的pk64", required = true)
     private String pk64;
+    @ApiParam(value = "对方用户的poeid", required = true)
     private String topoeid;
+    // itemid
+    @ApiParam(value = "itemid,也就是物品poeid", required = true)
     private String charitypoeid;
 
     public String getPoeid() {

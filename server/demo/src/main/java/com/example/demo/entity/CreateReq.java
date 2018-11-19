@@ -1,10 +1,20 @@
 package com.example.demo.entity;
 
 public class CreateReq {
+    private String name;
     private String info;
     private long money;
     private String username;
     private String password;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
 
     public String getInfo() {
         return info;
@@ -41,6 +51,7 @@ public class CreateReq {
     @Override
     public String toString() {
         return "CreateReq{" +
+                "name='" + name + '\'' +
                 ", info='" + info + '\'' +
                 ", money=" + money +
                 ", username='" + username + '\'' +

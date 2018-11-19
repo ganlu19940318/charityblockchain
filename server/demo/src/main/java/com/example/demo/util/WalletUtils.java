@@ -30,18 +30,14 @@ public class WalletUtils {
         return wallet;
     }
 
-    public static String[] register(Wallet wallet, String access, String secret){
+    public static String[] register(Wallet wallet, String access, String secret) throws Exception{
         String strheader = "{\"Bc-Invoke-Mode\":\"sync\"}";
         String strdata = "{\"access\":\"" + access +"\", \"secret\": \""+secret+"\", \"type\": \"Person\"}";
         JSONObject jsondata = JSON.parseObject(strdata);
         JSONObject jsonheader = JSON.parseObject(strheader);
 
         String response = null;
-        try {
-            response = wallet.register(jsonheader, jsondata).toString();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        response = wallet.register(jsonheader, jsondata).toString();
         System.out.println("response:"+response);
         RegisterResponse registerResponse = JSON.parseObject(response, RegisterResponse.class);
         Payload payload = JSON.parseObject(registerResponse.getPayload(), Payload.class);
